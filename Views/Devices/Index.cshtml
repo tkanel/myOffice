@@ -140,10 +140,7 @@
                     @Html.DisplayFor(modelItem => item.Notes)
                 </td>
                 <td>
-                    <a class="btn btn-sm btn-secondary button-intable" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a class="btn btn-sm btn-secondary button-intable" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    <a class="btn btn-sm btn-danger button-intable" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-
+                    <partial name="_tablebuttons" model="item" />
                 </td>
             </tr>
         }

@@ -69,6 +69,8 @@ namespace myITOffice.Controllers
 
 
             int pageSize = 100;
+
+            //count records
             int count = telephoneLines.Count();
             ViewBag.countRecords = count;
 

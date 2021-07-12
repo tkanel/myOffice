@@ -135,9 +135,7 @@
 
 
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <partial name="_tablebuttons" model="item" />
                 </td>
             </tr>
         }
@@ -155,14 +153,14 @@
    asp-route-sortOrder="@ViewData["CurrentSort"]"
    asp-route-pageNumber="@(Model.PageIndex - 1)"
    asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-light btn-sm @prevDisabled">
+   class="btn btn-info btn-sm @prevDisabled">
     <span><<</span>Previous
 </a>
 <a asp-action="Index"
    asp-route-sortOrder="@ViewData["CurrentSort"]"
    asp-route-pageNumber="@(Model.PageIndex + 1)"
    asp-route-currentFilter="@ViewData["CurrentFilter"]"
-   class="btn btn-light btn-sm @nextDisabled">
+   class="btn btn-info btn-sm @nextDisabled">
     Next <span>>></span>
 </a>
 
