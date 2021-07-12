@@ -7980,11 +7980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thodoris\\source\\repos\\myITOffice\\myITOffice.csproj",
+      "projectUniqueName": "C:\\Users\\Thodoris\\source\\Git\\myITOffice\\myITOffice.csproj",
       "projectName": "myITOffice",
-      "projectPath": "C:\\Users\\Thodoris\\source\\repos\\myITOffice\\myITOffice.csproj",
+      "projectPath": "C:\\Users\\Thodoris\\source\\Git\\myITOffice\\myITOffice.csproj",
       "packagesPath": "C:\\Users\\Thodoris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thodoris\\source\\repos\\myITOffice\\obj\\",
+      "outputPath": "C:\\Users\\Thodoris\\source\\Git\\myITOffice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

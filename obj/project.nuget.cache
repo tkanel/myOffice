@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oYX10LHaCrJnTrIhaO7PeRy4q75LSuE7HTpXNGrtXBboUpIAHg+w918fv1rTjcSiEZcxlat4SjEvWrh4c3PMsw==",
+  "dgSpecHash": "mBa69l9RjmOsNfTamJHbLMhVE3J+yhpmyFKPAKg35DfhcGCPwCDpBZ+t/e8lpmmDBdxagcaNvPHXF/nkdowiog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thodoris\\source\\repos\\myITOffice\\myITOffice.csproj",
+  "projectFilePath": "C:\\Users\\Thodoris\\source\\Git\\myITOffice\\myITOffice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thodoris\\.nuget\\packages\\csvhelper\\27.1.0\\csvhelper.27.1.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
