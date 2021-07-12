@@ -1,0 +1,94 @@
+﻿@model myITOffice.ViewModels.HelpDeskViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>Create a new helpDesk ticket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Descr" class="control-label"></label>
+                <input asp-for="Descr" class="form-control" />
+                <span asp-validation-for="Descr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <textarea asp-for="Notes" class="form-control"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedOn" class="control-label"></label>
+                <input asp-for="CreatedOn" class="form-control" />
+                <span asp-validation-for="CreatedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResolvedOn" class="control-label"></label>
+                <input asp-for="ResolvedOn" class="form-control" />
+                <span asp-validation-for="ResolvedOn" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="HelpDeskAttachement" class="control-label"></label>
+                <input asp-for="HelpDeskAttachement" class="form-control" />
+                
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">
+                    <option value="">Select a category</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeviceTypeId" class="control-label"></label>
+                <select asp-for="DeviceTypeId" class="form-control" asp-items="ViewBag.DeviceTypeId">
+                    <option value="">Select a device type</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="OfficeUserId" class="control-label"></label>
+                <select asp-for="OfficeUserId" class="form-control" asp-items="ViewBag.OfficeUserId">
+                    <option value="">Select a user</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeviceId" class="control-label"></label>
+                <select asp-for="DeviceId" class="form-control" asp-items="ViewBag.DeviceId">
+                    <option value="">Select a device</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create"  class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+
+        $(function () {
+            $('#btn').click(function () {
+                alert($('input[type=file]').val());
+                return false;
+
+            });
+        });
+
+
+    </script>
+
+
+}

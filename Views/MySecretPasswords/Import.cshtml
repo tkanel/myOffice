@@ -1,0 +1,56 @@
+﻿@model IEnumerable<myITOffice.Models.MySecretPassword>
+
+
+@{
+    ViewData["Title"] = "Import";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+
+    <h4>Import access lists from csv file</h4>
+    <hr />
+
+    <p>CSV row should be like : Name,URL,Username,Passphrase</p>
+
+    <form asp-action="Import" method="post">
+
+        <div class="row">
+
+
+
+            <input class="btn btn-info" type="file" name="file" id="file">
+
+
+
+
+        </div>
+
+
+        <div class="row" style="padding-top:20px;">
+
+
+
+            <input class="btn btn-success" type="submit" value="Submit File">
+
+
+
+
+        </div>
+
+
+
+    </form>
+
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+
+
+</div>

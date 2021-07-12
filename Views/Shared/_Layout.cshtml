@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IT-Office</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/7f3236ac92.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    
+        <!--HEADER-->
+    <header>
+        <div class="container-fluid">
+            
+            <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light bg-white border-bottom box-shadow mb-3">
+
+                <a class="navbar-brand text-info" asp-area="" asp-controller="Home" asp-action="Index">IT-Office</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-lg-inline-flex flex-lg-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">#DashBoard</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ItNotes" asp-action="Index">#Notes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="HelpDesks" asp-action="Index">#HelpDesk</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Devices" asp-action="Index">#Devices</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TelephoneLines" asp-action="Index">#Telephone Lines</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Projects" asp-action="Index">#Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="RackPorts" asp-action="Index">#Rack ports</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="LoginDetails" asp-action="Index">#Login details</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Settings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Categories" asp-action="Index">#Categories</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="DeviceTypes" asp-action="Index">#Device Type</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="OfficeUsers" asp-action="Index">#Users</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="LineTypes" asp-action="Index">#Telephone Line Types</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Racks" asp-action="Index">#Racks</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="MySecretPasswords" asp-action="Index">#Sensitive info</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">#About</a>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!--CONTENT-->
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer class="border-top footer text-muted">
+        <div class="container-fluid">
+            &copy; 2020 - myITOffice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

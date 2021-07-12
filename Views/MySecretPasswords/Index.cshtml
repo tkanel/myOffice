@@ -1,0 +1,127 @@
+﻿@model IEnumerable<myITOffice.Models.MySecretPassword>
+
+@{
+    ViewData["Title"] = "My Secret Passwords";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Access List</a>
+    </nav>
+    <p style="padding:10px 10px 0px 0px;">
+        <a asp-action="Create" class="btn btn-info btn-sm">Create</a>
+
+        <a style="padding-left:10px" asp-action="Import" class="btn btn-success btn-sm">Import list</a>
+    </p>
+
+    <form asp-action="Index" method="post">
+
+        <p>
+
+
+            <input type="password" id="myPIN" name="myPIN" value="Give PIN" />
+            <input type="submit" id="btnCheck" value="Give PIN for accesing data" />
+
+
+
+        </p>
+
+
+    </form>
+
+    @if (ViewBag.myPin)
+    {
+        <div id="divTable" value="1234">
+
+            <table id="secretPasswordsTable" class="table table-bordered table-responsive table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Name")
+                        </th>
+                        <th>
+
+                            @Html.Label("URL")
+                        </th>
+                        <th>
+
+                            @Html.Label("Username")
+                        </th>
+                        <th>
+
+                            @Html.Label("Password")
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.URL)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Passphrase)
+
+                                
+                            </td>
+                            <td>
+                                <a class="btn btn-sm btn-secondary button-intable" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="btn btn-sm btn-secondary button-intable" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="btn btn-sm btn-danger button-intable" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+
+    }
+
+
+
+</div>
+
+
+
+@section scripts{
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+
+            if (@ViewBag.myHiddenDivs=='123456')
+
+
+                $('#myPIN').css('display', 'none');
+                $('#btnCheck').css('display', 'none');
+
+            
+
+        });
+
+
+
+    </script>
+
+
+
+
+
+}

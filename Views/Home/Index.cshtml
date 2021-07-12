@@ -1,0 +1,376 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "DashBoard";
+}
+
+<div class="text-center">
+    <p><h4>Dashboard  <i class="fas fa-chart-line"></i></h4></p>
+    <hr />
+
+    <p class="text-left">
+
+
+        <i class="fas fa-clipboard-list"></i>
+        <strong>Open Tickets : </strong><span class="numberCircle" style="color:red">@ViewBag.OpenTickets </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="fas fa-user"></i>
+        <strong>Users : </strong><span class="numberCircle" style="color:red">@ViewBag.Users </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="fas fa-desktop"></i>
+        <strong>Devices : </strong><span class="numberCircle" style="color:red">@ViewBag.Devices </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="far fa-calendar"></i>
+        <strong>Categories: </strong><span class="numberCircle" style="color:red">@ViewBag.Categories </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="fab fa-line"></i>
+        <strong>Line Types: </strong><span class="numberCircle" style="color:red">@ViewBag.LineTypes </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="fas fa-signal"></i>
+        <strong>Tel.Lines: </strong><span class="numberCircle" style="color:red">@ViewBag.TelLines </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="fas fa-mobile-alt"></i>
+        <strong>Device Types: </strong><span class="numberCircle" style="color:red">@ViewBag.DeviceTypes </span> <i class="fas fa-angle-double-right"></i>
+
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <strong>Logins: </strong><span class="numberCircle" style="color:red">@ViewBag.Logins</span>
+
+    </p>
+
+    <hr />
+
+    <div class="container-fluid text-left">
+
+
+        <div class="table-responsive">
+
+            @* Retrieve open tickets from Helpdesk *@
+
+            <a asp-action="Index" asp-controller="HelpDesks" class="btn btn-info btn-sm"><i class="fas fa-clipboard-list"></i> Manage helpdesk tickets</a>
+
+            <table class="table table-sm table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Description")
+                        </th>
+                        <th>
+                            @Html.Label("Notes")
+                        </th>
+
+                        <th>
+                            @Html.Label("Created")
+                        </th>
+
+                        <th>
+                            @Html.Label("Resolved")
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var helpdesk in Model.HelpDesks)
+                    {
+                        <tr>
+                            <td>
+                                @helpdesk.Descr
+                            </td>
+                            <td>
+                                @helpdesk.Notes
+                            </td>
+                            <td>
+                                <div class="text-info">@helpdesk.CreatedOn</div>
+                            </td>
+                            <td>
+                                @Html.Label("", "Open", new { style = "color:#ff0000" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+            @*RETRIEVE LOGINS*@
+
+            <a asp-action="Index" asp-controller="LoginDetails" class="btn btn-info btn-sm"><i class="fas fa-clipboard-list"></i> Manage Logins</a>
+
+            <table class="table table-sm table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Description")
+                        </th>
+                        <th>
+                            @Html.Label("User Name")
+                        </th>
+
+                        <th>
+                            @Html.Label("Password")
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var login in Model.LoginDetails)
+                    {
+                        <tr>
+                            <td>
+                                @login.Description
+                            </td>
+                            <td>
+                                @login.UserName
+                            </td>
+                            <td>
+                                @*<div class="text-info">@login.Password</div>*@
+                                <div class="text-info">@login.Password.Substring(0, 5)*************</div>
+
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+            @* Retrieve line types *@
+
+            <a asp-action="Index" asp-controller="LineTypes" class="btn btn-info btn-sm"><i class="fab fa-line"></i> Manage line types</a>
+
+            <table class="table table-striped table-sm table-bordered table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Description")
+                        </th>
+                        <th>
+                            @Html.Label("Notes")
+                        </th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    @foreach (var lineType in Model.LineTypes)
+                    {
+                        <tr>
+                            <td>
+                                @lineType.Description
+                            </td>
+                            <td>
+                                @lineType.Notes
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+
+
+
+            @* Retrieve Users *@
+
+            <a asp-action="Index" asp-controller="OfficeUsers" class="btn btn-info btn-sm"> <i class="fas fa-user"></i> Manage users</a>
+
+            <table class="table table-striped table-sm table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Name")
+                        </th>
+                        <th>
+                            @Html.Label("Phone")
+                        </th>
+                        <th>
+                            @Html.Label("Mobile Phone")
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model.Users)
+                    {
+                        <tr>
+                            <td>
+                                @user.Name
+                            </td>
+                            <td>
+                                @user.InternalPhone
+                            </td>
+                            <td>
+                                <div class="text-info">@user.MobilePhone</div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+            @* Retrieve categories  *@
+
+            <a asp-action="Index" asp-controller="Categories" class="btn btn-info btn-sm"> <i class="far fa-calendar"></i> Manage categories</a>
+
+            <table class="table table-striped table-sm table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Description")
+                        </th>
+                        <th>
+                            @Html.Label("Notes")
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <tr>
+                            <td>
+                                @category.Descr
+                            </td>
+                            <td>
+                                @category.Notes
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+
+            @* Retrieve Device Types *@
+
+            <a asp-action="Index" asp-controller="DeviceTypes" class="btn btn-info btn-sm"> <i class="fas fa-mobile-alt"></i> Manage device types</a>
+
+            <table class="table table-striped table-sm table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Description")
+                        </th>
+
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var deviceType in Model.DeviceTypes)
+                    {
+                        <tr>
+                            <td>
+                                @deviceType.Description
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+            @* Retrieve Devices *@
+
+            <a asp-action="Index" asp-controller="Devices" class="btn btn-info btn-sm"><i class="fas fa-desktop"></i> Manage devices</a>
+
+            <table class="table table-striped table-sm table-bordered table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Device name")
+                        </th>
+                        <th>
+                            @Html.Label("Description")
+                        </th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    @foreach (var device in Model.Devices)
+                    {
+                        <tr>
+                            <td>
+                                @device.Name
+                            </td>
+                            <td>
+                                @device.Description
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+
+
+            @* Retrieve Telephone Lines *@
+
+            <a asp-action="Index" asp-controller="TelephoneLines" class="btn btn-info btn-sm"> <i class="fas fa-signal"></i> Manage telephone lines</a>
+
+            <table class="table table-striped table-sm table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            @Html.Label("Number")
+                        </th>
+                        <th>
+                            @Html.Label("Shortcut")
+                        </th>
+
+                        <th>
+                            @Html.Label("SIM")
+                        </th>
+
+                        <th>
+                            @Html.Label("PIN1")
+                        </th>
+
+                        <th>
+                            @Html.Label("Notes")
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var telLines in Model.TelephoneLines)
+
+                    {
+                        <tr>
+                            <td>
+                                @telLines.Number
+                            </td>
+                            <td>
+                                @telLines.Shortcut
+                            </td>
+                            <td>
+                                <div class="text-info">@telLines.SIM</div>
+                            </td>
+                            <td>
+                                @telLines.PIN1
+                            </td>
+                            <td>
+                                @telLines.Notes
+                            </td>
+                        </tr>
+
+
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+</div>

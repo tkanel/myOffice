@@ -1,0 +1,115 @@
+﻿@model myITOffice.Models.Device
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<h4>Create a device</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="DeviceTypeId" asp-items="ViewBag.DeviceType" size="1" class="form-control">
+                    <option value="">Select a device type</option>
+                </select>
+
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IPAddress1" class="control-label"></label>
+                <input asp-for="IPAddress1" class="form-control" />
+                <span asp-validation-for="IPAddress1" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IPAddress2" class="control-label"></label>
+                <input asp-for="IPAddress2" class="form-control" />
+                <span asp-validation-for="IPAddress2" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IPAddress3" class="control-label"></label>
+                <input asp-for="IPAddress3" class="form-control" />
+                <span asp-validation-for="IPAddress3" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IPAddress4" class="control-label"></label>
+                <input asp-for="IPAddress4" class="form-control" />
+                <span asp-validation-for="IPAddress4" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IPAddress5" class="control-label"></label>
+                <input asp-for="IPAddress5" class="form-control" />
+                <span asp-validation-for="IPAddress5" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MAC" class="control-label"></label>
+                <input asp-for="MAC" class="form-control" />
+                <span asp-validation-for="MAC" class="text-danger"></span>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <select asp-for="OfficeUserId" asp-items="ViewBag.OfficeUser" size="1" class="form-control">
+                    <option value="">Select a user</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <textarea asp-for="Notes" class="form-control"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

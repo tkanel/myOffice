@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>\\BACKUPSERVER\myITOffice</_PublishTargetUrl>
+    <History>True|2021-06-16T07:19:25.0992809Z;True|2021-06-15T17:14:03.9885544+03:00;True|2021-06-15T17:06:00.7076152+03:00;True|2021-06-15T12:23:25.1829998+03:00;True|2021-06-15T12:05:00.2206558+03:00;True|2021-06-14T16:20:37.1210231+03:00;True|2021-06-14T16:08:24.0869791+03:00;False|2021-06-14T16:00:11.7991380+03:00;True|2021-06-14T15:39:23.1994831+03:00;False|2021-06-14T15:36:15.1518050+03:00;False|2021-06-14T15:22:03.0965092+03:00;False|2021-06-14T15:19:05.1024013+03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=localhost%3bDatabase=myITOffice%3bUser Id=tkanel%3bPassword=1234%40qwE%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

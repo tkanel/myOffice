@@ -1,0 +1,135 @@
+﻿@model PaginatedList<myITOffice.Models.ItNote>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<form asp-action="Index" method="get">
+
+
+    <div class="container-fluid form-actions no-color">
+        <div class="row">
+
+            <div class="col text-left">
+
+                <h4>Notes list</h4>
+
+            </div>
+
+            <div class="col">
+
+                <a class="btn btn-info btn-sm" asp-action="Create">Create New</a>
+
+            </div>
+
+            <div class="col text-right">
+
+                Find by description : <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-info btn-sm" /> |
+                <a asp-action="Index">Back to Full List</a>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+</form>
+
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DescrSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.Label("DESCRIPTION")</a>
+                </th>
+                <th>
+                    @Html.Label("NOTES")
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["CategorySortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.Label("CATEGORY")</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DeviceTypeSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.Label("TYPE")</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DeviceSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]"> @Html.Label("DEVICE")</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["UserSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]"> @Html.Label("USER")</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["CreatedSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]"> @Html.Label("CREATED")</a>
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descr)
+                    </td>
+                    <td>
+                        @Html.Raw(item.Notes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Descr)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeviceType.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Device.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OfficeUser.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                    </td>
+
+
+                    <td>
+                        <a class="btn btn-sm btn-info btn-block" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-sm btn-warning btn-block" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-sm btn-danger btn-block" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@*PAGINATION*@
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-light btn-sm @prevDisabled">
+    <span><<</span>Previous
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-light btn-sm @nextDisabled">
+    Next <span>>></span>
+</a>
