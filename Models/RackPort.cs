@@ -10,9 +10,7 @@ namespace myITOffice.Models
     {
         public int Id { get; set; }
 
-        [Required]
-        public int Rack { get; set; }
-
+        
         [Required]
         public int Port { get; set; }
 
@@ -20,6 +18,7 @@ namespace myITOffice.Models
         public string Notes { get; set; }
 
         public int RackId { get; set; }
+        public Rack Racks { get; set ; }
 
     }
 }

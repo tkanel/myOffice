@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7D4knEG4KQrkQ+1ueXhEVuktUPBM0iwwtKhJOQIk+Q6WxNzlx2vmDok0h8AXmlxpc+iWDqR8GZbWzI6UTxGWWw==",
+  "dgSpecHash": "+7s3X4L9lBVWpq2RydLIJQ+2HZq8bnmm7Izf4yk54mmVuUXugLhbiU+2APWiDJM4Z2uDfyuEX8drf4hfCl6B6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thodoris\\source\\repos\\myITOffice\\myITOffice.csproj",
+  "projectFilePath": "C:\\Users\\Thodoris\\source\\Git\\myITOffice\\myITOffice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thodoris\\.nuget\\packages\\csvhelper\\27.1.0\\csvhelper.27.1.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -174,9 +174,9 @@
     "C:\\Users\\Thodoris\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.7\\microsoft.netcore.app.runtime.win-x64.5.0.7.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.7.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.7\\microsoft.aspnetcore.app.runtime.win-x64.5.0.7.nupkg.sha512"
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.8\\microsoft.netcore.app.runtime.win-x64.5.0.8.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.8\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.8.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.8\\microsoft.aspnetcore.app.runtime.win-x64.5.0.8.nupkg.sha512"
   ],
   "logs": []
 }

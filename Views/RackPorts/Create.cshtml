@@ -5,36 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h4>Create a new port</h4>
 
-
-<h4>Create a new Rack Port</h4>
+<h5 style="color:red">Προσοχή : @ViewBag.Alert</h5>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Rack" class="control-label"></label>
-                <input asp-for="Rack" class="form-control" />
-                <span asp-validation-for="Rack" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Port" class="control-label"></label>
-                <input asp-for="Port" class="form-control" />
-                <span asp-validation-for="Port" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Notes" class="control-label"></label>
-                <textarea asp-for="Notes" class="form-control"></textarea>
-                <span asp-validation-for="Notes" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RackId" class="control-label"></label>
-                <select asp-for="RackId" class ="form-control" asp-items="ViewBag.RackId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+                <div class="form-group">
+                    <label class="control-label">Rack type/name</label>
+                    <select asp-for="RackId" class="form-control" asp-items="ViewBag.RackBrand"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Port" class="control-label"></label>
+                    <input asp-for="Port" class="form-control" />
+                    <span asp-validation-for="Port" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Notes" class="control-label"></label>
+                    <textarea asp-for="Notes" class="form-control" ></textarea>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+
         </form>
     </div>
 </div>
@@ -43,6 +42,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

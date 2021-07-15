@@ -5,46 +5,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h1>Index</h1>
 
-<div class="container-fluid form-actions no-color">
-    <div class="row">
-
-        <div class="col text-left">
-
-            <h4>Rack ports list</h4>
-
-        </div>
-
-
-
-        <div class="col">
-
-            <a class="btn btn-info btn-sm" asp-action="Create">Create New</a>
-
-        </div>
-
-       
-
-
-
-
-    </div>
-
-
-
-</div>
-
-<table class="table table-striped table-bordered table-sm table-hover">
-    <thead class="table-dark">
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Rack)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Port)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Notes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Racks)
             </th>
             <th></th>
         </tr>
@@ -53,9 +30,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Rack)
-                </td>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.Port)
                 </td>
@@ -63,8 +38,11 @@
                     @Html.DisplayFor(modelItem => item.Notes)
                 </td>
                 <td>
-                    <partial name="_tablebuttons" model="item" />
+                    @Html.DisplayFor(modelItem => item.Racks.Brand)
                 </td>
+                <td>
+
+                    <partial name="_tablebuttons" model="item" />
             </tr>
         }
     </tbody>

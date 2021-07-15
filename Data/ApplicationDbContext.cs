@@ -28,6 +28,11 @@ namespace myITOffice.Data
         public DbSet<RackPort> RackPorts { get; set; }
         public DbSet<Rack> Racks { get; set; }
         public DbSet<MySecretPassword> MySecretPasswords { get; set; }
+
+        internal object FirstOrDefault(Func<object, bool> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 
