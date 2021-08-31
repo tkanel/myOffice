@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+7s3X4L9lBVWpq2RydLIJQ+2HZq8bnmm7Izf4yk54mmVuUXugLhbiU+2APWiDJM4Z2uDfyuEX8drf4hfCl6B6Q==",
+  "dgSpecHash": "HdeCPGbKMWzIZL+weJqWiLfqaa4mHMQvge7ddWR1bTsExfRtmkh4TDjv8HFLcZX0B+Fs9pF0SlHgj+hE0Ghxqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Thodoris\\source\\Git\\myITOffice\\myITOffice.csproj",
   "expectedPackageFiles": [
@@ -33,12 +33,12 @@
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.7\\microsoft.entityframeworkcore.5.0.7.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.7\\microsoft.entityframeworkcore.abstractions.5.0.7.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.7\\microsoft.entityframeworkcore.analyzers.5.0.7.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.7\\microsoft.entityframeworkcore.design.5.0.7.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.6\\microsoft.entityframeworkcore.design.5.0.6.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.7\\microsoft.entityframeworkcore.relational.5.0.7.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\5.0.7\\microsoft.entityframeworkcore.sqlite.5.0.7.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\5.0.7\\microsoft.entityframeworkcore.sqlite.core.5.0.7.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.7\\microsoft.entityframeworkcore.sqlserver.5.0.7.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.7\\microsoft.entityframeworkcore.tools.5.0.7.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.6\\microsoft.entityframeworkcore.sqlserver.5.0.6.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.6\\microsoft.entityframeworkcore.tools.5.0.6.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
@@ -174,9 +174,9 @@
     "C:\\Users\\Thodoris\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Thodoris\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.8\\microsoft.netcore.app.runtime.win-x64.5.0.8.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.8\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.8.nupkg.sha512",
-    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.8\\microsoft.aspnetcore.app.runtime.win-x64.5.0.8.nupkg.sha512"
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\5.0.9\\microsoft.netcore.app.runtime.win-x64.5.0.9.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\5.0.9\\microsoft.windowsdesktop.app.runtime.win-x64.5.0.9.nupkg.sha512",
+    "C:\\Users\\Thodoris\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\5.0.9\\microsoft.aspnetcore.app.runtime.win-x64.5.0.9.nupkg.sha512"
   ],
   "logs": []
 }

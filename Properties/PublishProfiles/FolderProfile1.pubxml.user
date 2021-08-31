@@ -6,7 +6,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>\\BACKUPSERVER\myITOffice</_PublishTargetUrl>
-    <History>True|2021-07-14T14:32:57.9764976Z;</History>
+    <History>True|2021-08-31T10:12:05.1995272Z;True|2021-07-14T17:32:57.9764976+03:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">

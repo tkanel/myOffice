@@ -1126,3 +1126,4 @@ C:\Users\Thodoris\source\Git\myITOffice\obj\Debug\net5.0\Razor\Views\RackPorts\D
 C:\Users\Thodoris\source\Git\myITOffice\obj\Debug\net5.0\Razor\Views\RackPorts\Details.cshtml.g.cs
 C:\Users\Thodoris\source\Git\myITOffice\obj\Debug\net5.0\Razor\Views\RackPorts\Edit.cshtml.g.cs
 C:\Users\Thodoris\source\Git\myITOffice\obj\Debug\net5.0\Razor\Views\RackPorts\Index.cshtml.g.cs
+C:\Users\Thodoris\source\Git\myITOffice\obj\Debug\net5.0\myITOffice.csproj.AssemblyReference.cache

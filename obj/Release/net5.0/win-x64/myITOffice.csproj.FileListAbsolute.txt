@@ -1493,7 +1493,6 @@ C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\dbgshim.dll
 C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\hostfxr.dll
 C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\hostpolicy.dll
 C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\mscordaccore.dll
-C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\mscordaccore_amd64_amd64_5.0.821.31504.dll
 C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\mscordbi.dll
 C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\mscorrc.dll
 C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\ucrtbase.dll
@@ -1766,3 +1765,4 @@ C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\myITOffice.dl
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\ref\myITOffice.dll
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\myITOffice.pdb
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\myITOffice.genruntimeconfig.cache
+C:\Users\Thodoris\source\Git\myITOffice\bin\Release\net5.0\win-x64\mscordaccore_amd64_amd64_5.0.921.35908.dll

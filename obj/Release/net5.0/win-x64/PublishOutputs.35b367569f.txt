@@ -549,7 +549,7 @@ C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\db
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\hostfxr.dll
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\hostpolicy.dll
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\mscordaccore.dll
-C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\mscordaccore_amd64_amd64_5.0.821.31504.dll
+C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\mscordaccore_amd64_amd64_5.0.921.35908.dll
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\mscordbi.dll
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\mscorrc.dll
 C:\Users\Thodoris\source\Git\myITOffice\obj\Release\net5.0\win-x64\PubTmp\Out\ucrtbase.dll
