@@ -35,7 +35,7 @@
                     @Html.DisplayFor(modelItem => item.Port)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Notes)
+                    @Html.Raw(item.Notes)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Racks.Brand)

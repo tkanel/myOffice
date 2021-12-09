@@ -137,7 +137,7 @@
                     @Html.DisplayFor(modelItem => item.OfficeUser.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Notes)
+                    @Html.Raw(item.Notes)
                 </td>
                 <td>
                     <partial name="_tablebuttons" model="item" />
